@@ -57,7 +57,7 @@ function Card(data) {
   }
 
   return(
-    <div className='cursor-pointer w-[320px] h-[400px] mb-[100px] hover:scale-105 transition duration-200'>
+    <div className='cursor-pointer w-[320px] h-[400px] mb-[100px] hover:scale-105 transition duration-200 movil:w-40 movil:h-44'>
 
       <figure className='relative mb-2 w-full h-full rounded-md'>
 

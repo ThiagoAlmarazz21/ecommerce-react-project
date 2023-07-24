@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { ShopingCartContext } from '../../Context/Context'
+import Menu from '../Menu/Menu'
 
 function NavBar() {
 
@@ -13,15 +14,25 @@ function NavBar() {
   }
 
   return(
-    <nav className='flex justify-between item-center bg-Background fixed z-10 top-0 w-full py-5 px-8 text-md text-white'>
-      <ul className='flex items-center gap-3'>
+    <nav className='flex justify-between item-center bg-Background fixed z-10 top-0 w-full py-5 px-8 text-md text-white movil-sm:py-2 movil:py-2 laptop:py-2'>
+
+      <div className='flex items-center font-semibold text-sky-300 text-2xl hover:text-sky-600 duration-200 lg:hidden'>
+      <NavLink
+              to='/'
+              onClick={() => context.setSearchByCategory(null)}
+              >
+                TDShop
+          </NavLink>
+      </div>
+
+      <ul className='flex items-center gap-3 movil-sm:hidden movil:hidden laptop:hidden'>
 
         <li className='font-semibold text-sky-300 text-2xl hover:text-sky-600 duration-200'>
           <NavLink
-          to='/'
-          onClick={() => context.setSearchByCategory(null)}
-          >
-            TDShop
+              to='/'
+              onClick={() => context.setSearchByCategory(null)}
+              >
+                TDShop
           </NavLink>
         </li>
 
@@ -67,7 +78,7 @@ function NavBar() {
 
       </ul>
 
-      <ul className='flex items-center gap-3'>
+      <ul className='flex items-center gap-3 movil-sm:hidden movil:hidden laptop:hidden'>
 
         <li className='flex items-center justify-center text-sm text-white'>
         <i className='bx bx-envelope text-sm mr-1'></i> youremail@gmail.com
@@ -91,10 +102,17 @@ function NavBar() {
           className={'bx bxs-cart-alt text-2xl cursor-pointer hover:text-sky-300 transition duration-200'}>
           </i>
           <span className='absolute top-0 cursor-default'>{context.cartProducts.length}</span>
+
         </li>
 
       </ul>
+
+      <ul className='lg:hidden'>
+        <Menu />
+      </ul>
+
     </nav>
+    
   )
 }
 

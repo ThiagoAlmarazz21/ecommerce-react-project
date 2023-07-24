@@ -90,10 +90,14 @@ export default {
         'slide-left': 'slide-left .5s',
         'jump-forward': 'jump-forward .5s',
         'jump-forward-iconcheck': 'jump-forward-iconcheck .8s'
+      },
 
+      screens: {
+        'movil-sm': { 'min': '220px', 'max': '400px' },
+        'movil': { 'min': '400px', 'max': '768px' },
+        'laptop': { 'min': '768px', 'max': '1024px' },
+        'desktop': { 'min': '1024px', 'max': '1280px' }
       }
-
-
     },
   },
   plugins: [],

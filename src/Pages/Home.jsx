@@ -24,14 +24,14 @@ function Home() {
     <Layout>
       <h1 className='text-white text-2xl mb-4 font-extralight animate-fade'>¿Qué estás buscando?</h1>
       <input
-      className='text-white mb-4 bg-transparent animate-fade border border-white rounded-md py-1 px-2 focus:outline-none hover:border-sky-300 focus:border-sky-300 placeholder:text-white placeholder:font-extralight'
+      className='text-white mb-4 bg-transparent animate-fade border border-white rounded-md py-1 px-2 focus:outline-none hover:border-sky-300 focus:border-sky-300 placeholder:text-white placeholder:font-extralight movil:mb-10'
       type='text'
       placeholder='Buscar producto...'
       value={context.searchByTitle}
       onChange={(e) => context.setSearchByTitle(e.target.value)}
       />
 
-      <div className='flex items-center justify-center flex-wrap gap-4 w-full max-w-[1400px] animate-fade'>
+      <div className='flex items-center justify-center flex-wrap gap-4 w-full max-w-[1400px] animate-fade movil:grid movil:grid-cols-1 movil:place-items-center movil:gap-1'>
 
         {renderView()}
     
