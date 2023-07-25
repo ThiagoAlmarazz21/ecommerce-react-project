@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import { json } from 'react-router-dom'
 import { ShopingCartContext } from '../Context/Context'
 import Card from '../Components/Card/Card'
 import Layout from '../Components/Layout/Layout'
@@ -31,7 +30,7 @@ function Home() {
       onChange={(e) => context.setSearchByTitle(e.target.value)}
       />
 
-      <div className='flex items-center justify-center flex-wrap gap-4 w-full max-w-[1400px] animate-fade movil:grid movil:grid-cols-1 movil:place-items-center movil:gap-1'>
+      <div className='flex items-center justify-center flex-wrap gap-4 w-full max-w-[1400px] animate-fade movil-sm:grid movil-sm:grid-cols-1 movil-sm:place-items-center movil-sm:gap-1'>
 
         {renderView()}
     

@@ -1,12 +1,13 @@
 import { useContext } from "react"
 import { ShopingCartContext } from "../../Context/Context"
+import { useSnackbar } from 'notistack'
 import '../CheckOutSideMenu/SideMenu.css'
 
 const ProductDetail = () => {
   const context = useContext(ShopingCartContext)
 
   return (
-    <aside className={`${context.isProductDetailOpen ? 'flex animate-slide-up' : 'right-[-1000px] transition-all duration-1000'} flex-col bg-Background items-center w-[360px] h-[calc(100vh-80px)] fixed z-10 right-0 border border-white rounded-[4px]`}>
+    <aside className={`${context.isProductDetailOpen ? 'flex animate-slide-up' : 'right-[-1000px] transition-all duration-1000'} flex-col bg-Background items-center w-[360px] h-[calc(100vh-80px)] fixed z-10 right-0 border border-white rounded-[4px] movil-sm:w-full movil-sm:h-screen movil-sm:top-0 movil-sm:z-20 movil:w-full movil:h-screen movil:top-0 movil:z-20`}>
       <div className="flex justify-between items-center w-full p-2">
       <h2 className="text-xl text-white font-light">Detalles</h2>
       <i 
@@ -22,6 +23,7 @@ const ProductDetail = () => {
       <div className="scroll-container scroll-card">
 
         <div className="flex flex-col items-center">
+          
           <p className='text-xl text-white font-light'>
             <span>${context.showProduct.price}</span>
           </p>
@@ -31,6 +33,7 @@ const ProductDetail = () => {
           <p className='text-white text-sm text-center mt-4 m-6'>
             <span>{context.showProduct.description}</span>
           </p>
+
         </div>
 
       </div>

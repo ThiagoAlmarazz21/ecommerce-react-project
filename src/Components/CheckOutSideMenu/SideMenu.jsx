@@ -45,7 +45,7 @@ const CheckoutSideMenu = () => {
   }
 
   return(
-    <aside className={`${context.isCheckoutSideMenuOpen ? 'flex animate-slide-right' : 'right-[-1000px] transition-all duration-500'} flex flex-col bg-Background items-center w-[360px] h-[calc(100vh-100px)] fixed z-40 top-[68px] right-0 border border-white rounded-[4px]`}>
+    <aside className={`${context.isCheckoutSideMenuOpen ? 'flex animate-slide-right' : 'right-[-1000px] transition-all duration-500'} flex flex-col bg-Background items-center w-[360px] h-[calc(100vh-100px)] fixed z-40 top-[68px] right-0 border border-white rounded-[4px] movil-sm:w-full movil-sm:h-screen movil-sm:top-0 movil:w-full movil:h-screen`}>
       <div className="flex justify-between items-center w-full p-2">
       <h2 className="text-xl text-white font-light">Mis productos</h2>
       <i 
