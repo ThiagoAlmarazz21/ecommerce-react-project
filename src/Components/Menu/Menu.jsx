@@ -9,7 +9,7 @@ function Menu() {
     context.closeProductDetail()
     context.openCheckoutSideMenu()
   }
-  
+
   const context = useContext(ShopingCartContext)
 
   const [open, setOpen] = useState(false)
@@ -66,8 +66,8 @@ function Menu() {
                   setOpen(false)
                   showCheckoutSideMenu()
                 }}
-              className='py-4 hover:bg-gray-300/30 w-full transition-all duration-200'>
-                  Mis productos <i className='bx bxs-cart-alt'></i>
+              className='py-4 hover:bg-gray-300/30 w-full transition-all duration-200 flex items-center justify-center'>
+                  Mis productos <i className='bx bx-cart'></i><span className='text-sm'>{context.cartProducts.length}</span>
               </NavLink>
 
               <h2 className='py-4 font-light'>Categorías</h2>

@@ -7,7 +7,7 @@ const ProductDetail = () => {
   const context = useContext(ShopingCartContext)
 
   return (
-    <aside className={`${context.isProductDetailOpen ? 'flex animate-slide-up' : 'right-[-1000px] transition-all duration-1000'} flex-col bg-Background items-center w-[360px] h-[calc(100vh-80px)] fixed z-10 right-0 border border-white rounded-[4px] movil-sm:w-full movil-sm:h-screen movil-sm:top-0 movil-sm:z-20 movil:w-full movil:h-screen movil:top-0 movil:z-20`}>
+    <aside className={`${context.isProductDetailOpen ? 'flex animate-slide-up' : 'right-[-1000px] transition-all duration-1000'} flex-col bg-Background items-center w-[360px] h-[calc(100vh-80px)] fixed z-10 right-0 border border-white rounded-[4px] movil-sm:w-full movil-sm:h-screen movil-sm:top-0 movil-sm:z-20 movil-sm:border-none movil:w-full movil:h-screen movil:top-0 movil:z-20 movil:border-none`}>
       <div className="flex justify-between items-center w-full p-2">
       <h2 className="text-xl text-white font-light">Detalles</h2>
       <i 
